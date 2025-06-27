@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProfStaff.MainPage">
+
+    <ListView x:Name="LocationsListView" 
+              HasUnevenRows="True"
+              IsGroupingEnabled="True">
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label Text="{Binding GroupHeader}" 
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           Padding="10,5"
+                           TextColor="#333"/>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Padding="30,5,10,5" 
+                                 BackgroundColor="#f9f9f9">
+                        <Label Text="{Binding Name}" 
+                               FontSize="16">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    Command="{Binding BindingContext.LocationTappedCommand, Source={x:Reference LocationsListView}}"
+                                    CommandParameter="{Binding .}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
