@@ -8,7 +8,7 @@
 
 Наглядного отображения иерархии
 
-<img src="https://github.com/user-attachments/assets/42a8b341-513c-4bae-85b8-3d4d8ce20770" width="300" alt="Пример интерфейса">
+<img src="https://github.com/user-attachments/assets/04225440-ec21-4ddc-930d-43045850be4b" width="300" alt="Пример интерфейса">
 
 📥 Установка
 Скачайте файл profstaff.apk на свой Android-устройство
@@ -31,7 +31,7 @@ RecyclerView - производительное отображение спис�
 
 Откройте ApiService.cs
 
-Измените константы:
+❗Измените константы:
 ```csharp
 private const string BaseUrl = "http://p.inventsoft.ru/Locations/GetLocations";
 private const string AuthToken = "ваш_токен";
